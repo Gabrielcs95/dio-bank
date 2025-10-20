@@ -1,10 +1,10 @@
 # Importa a classe Blueprint, o objeto request e o HTTPStatus do Flask
 from flask import Blueprint, request
-from app import User, db
+from ..app import User, db
 from http import HTTPStatus
 from sqlalchemy import inspect
 from flask_jwt_extended import jwt_required
-from utils import requires_role
+from ..utils import requires_role
 
 # Cria a instância do blueprints
 # "user" ->> nome do blueprint

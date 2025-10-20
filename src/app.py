@@ -111,8 +111,8 @@ def create_app(test_config=None):
     migrate.init_app(app, db)  # Configura migrações de banco de dados
     jwt.init_app(app)  # Configura JWT com a aplicação
 
-    #register blueprints
-    from controllers import user, role, auth
+    # register blueprints usando imports relativos (quando o pacote for importado como `src`)
+    from .controllers import user, role, auth
 
     app.register_blueprint(role.app)
     app.register_blueprint(auth.app)

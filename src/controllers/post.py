@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app import db, Post
+from ..app import db, Post
 from http import HTTPStatus
 
 app = Blueprint("post", __name__, url_prefix="/posts")
